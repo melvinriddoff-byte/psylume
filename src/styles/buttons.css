@@ -1,0 +1,77 @@
+/* Buttons. Coral fill carries navy text (5.4:1). White on coral would fail contrast. */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 52px;
+  padding: 0 1.75rem;
+  border: 2px solid transparent;
+  border-radius: var(--r-pill);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn--small {
+  min-height: 44px;
+  padding: 0 1.25rem;
+  font-size: 0.9375rem;
+}
+
+.btn--primary {
+  background: var(--c01-coral);
+  color: var(--c07-navy);
+}
+
+@media (hover: hover) {
+  .btn--primary:hover {
+    background: var(--c07-navy);
+    color: var(--c05-off-white);
+  }
+}
+
+.btn--secondary {
+  border-color: var(--c07-navy);
+  background: transparent;
+  color: var(--c07-navy);
+}
+
+@media (hover: hover) {
+  .btn--secondary:hover {
+    background: var(--c04-peach);
+    color: var(--c07-navy);
+  }
+}
+
+.btn--outline-light {
+  border-color: var(--c05-off-white);
+  background: transparent;
+  color: var(--c05-off-white);
+}
+
+@media (hover: hover) {
+  .btn--outline-light:hover {
+    background: var(--c05-off-white);
+    color: var(--c07-navy);
+  }
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: progress;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+}

@@ -1,0 +1,40 @@
+/* Crisis note */
+
+.crisis {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--r-md);
+  font-size: var(--fs-small);
+}
+
+.crisis--light {
+  background: var(--c04-peach);
+  color: var(--c07-navy);
+}
+
+.crisis--light a {
+  color: var(--c07-navy);
+  font-weight: 700;
+}
+
+.crisis--dark {
+  background: color-mix(in srgb, var(--c03-indigo) 55%, var(--c07-navy));
+  color: var(--c05-off-white);
+}
+
+.crisis__icon {
+  flex: none;
+  margin-top: 0.125rem;
+}
+
+.crisis--dark .crisis__icon {
+  color: var(--c06-gold);
+}
+
+.crisis__title {
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  font-size: 1rem;
+}

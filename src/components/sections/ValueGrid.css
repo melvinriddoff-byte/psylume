@@ -1,0 +1,44 @@
+/* Value grid: icon disc, label and short text */
+
+.values {
+  display: grid;
+  gap: clamp(1.75rem, 3vw, 2.5rem) 1.5rem;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.value {
+  display: grid;
+  gap: 0.5rem;
+  justify-items: start;
+  align-content: start;
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+.value__disc {
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  margin-bottom: 0.5rem;
+  border-radius: 50%;
+  background: var(--c04-peach);
+  color: var(--c07-navy);
+}
+
+.value__label {
+  font-size: var(--fs-h4);
+  color: var(--ink);
+}
+
+@media (max-width: 1040px) {
+  .values {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .values {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

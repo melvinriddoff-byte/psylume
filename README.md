@@ -2,7 +2,7 @@
 
 React + TypeScript (Vite) website built from the **Psylume Brand Identity 2026** book.
 
-Pages: **About us** (home), **Therapists**, **Consultation**, **Team**, **Contact**, plus the shared **Header** and **Footer**.
+Pages: **Home**, **About us**, **Therapists**, **Team**, **Contact**, **Consultation** and a **404** page, plus the shared **Header** and **Footer**.
 
 ## Run it
 
@@ -40,17 +40,23 @@ Colour notes:
 
 ### Logos
 
-The logo PNGs in `src/assets/logos/` were extracted from the brand-book PDF at high resolution and made transparent. For the sharpest result, replace them with the original SVG or PNG exports from your design source, keeping the same file names.
+The logo files in `src/assets/logos/` (lossless WebP) were extracted from the brand-book PDF at high resolution and made transparent. For the sharpest result, replace them with the original SVG or PNG exports from your design source, keeping the same file names.
 
 ## Placeholder content to replace before launch
 
 All of this is fictional or unconfirmed:
 
-- `src/data/site.ts`: email, phone, clinic address, opening hours, response-time promise, Instagram handle.
+- `src/data/site.ts`: contact details are real (added October 2026). Still to confirm: the response-time promise and the Instagram and LinkedIn links (the LinkedIn page returned 404 in October 2026). Set either to `null` to hide it.
 - `src/data/therapists.ts`: every therapist (names, credentials, approaches, languages). **Only publish verified practitioners and credentials.**
 - `src/data/team.ts`: every team member.
 - Portraits are arch-shaped initials. Swap in photos inside `ArchPortrait.tsx`.
 - Copy on the Consultation page ("we only use your details to arrange your consultation", reply times) should be reviewed against your real privacy policy and operations.
+
+## SEO and sharing
+
+- Each page sets its own tab title and meta description with `usePageMeta()` (`src/hooks/usePageMeta.ts`).
+- Icons and the link-preview image live in `public/` (favicon set, `apple-touch-icon.png`, `site.webmanifest`, `og-image.png`).
+- Once the site has its domain, change `og:image` and `twitter:image` in `index.html` to the full URL (for example `https://psylume.in/og-image.png`). Some apps, WhatsApp included, ignore relative image paths.
 
 ## Forms
 
@@ -62,22 +68,47 @@ The footer shows a crisis note on every page: India emergency number 112 and the
 
 ## Accessibility
 
-Skip link, visible focus rings, labelled form fields with inline errors and focus management, `aria-pressed` filter chips, reduced-motion support (the only animation is the hero artwork on load), and a keyboard-operable mobile menu. Text and button colour pairs were chosen for WCAG AA contrast.
+Skip link, visible focus rings, labelled form fields with inline errors and focus management, `aria-pressed` filter chips, reduced-motion support (smooth scrolling, scroll reveals and the hero animation all switch off), and a keyboard-operable mobile menu. Text and button colour pairs were chosen for WCAG AA contrast.
 
 ## Deploying
 
-This is a single-page app using client-side routing, so your host must serve `index.html` for every path. A Netlify-style `public/_redirects` file is included. On Vercel, add a rewrite of `/(.*)` to `/`.
+This is a single-page app using client-side routing, so your host must serve `index.html` for every path. A Netlify-style `public/_redirects` file and a `vercel.json` rewrite are included. Unknown addresses show the site's own 404 page.
 
 ## Structure
 
+Each page has its own folder holding the page, its sections and its styles. Shared pieces live in `components/`, grouped by role.
+
 ```
 src/
-  App.tsx, main.tsx
-  components/   Header, Footer, PageIntro, CrisisNote, Field, ArchComposition, ArchPortrait, Star, ScrollManager
-  pages/        About, Therapists, Consultation, Team, Contact
-  data/         site, therapists, team   (edit content here)
-  lib/          submit.ts                (form backend hook-up)
-  hooks/        usePageTitle.ts
-  styles/       tokens.css, base.css, components.css, pages.css
-  assets/logos/ primary mark + secondary lockup, colour and white
+  main.tsx                    entry point, loads global styles
+  app/App.tsx                 shell (header, footer, scrolling) and routes
+
+  components/
+    layout/                   Header, Footer, ScrollManager, SmoothScroll (+ Header.css, Footer.css)
+    sections/                 PageIntro, ValueGrid, CtaBand: page sections used on more than one page
+    ui/                       Field (form field), CrisisNote
+    brand/                    ArchComposition (hero art), ArchPortrait, Star
+    icons/                    WhatsAppIcon
+
+  pages/
+    home/                     HomePage.tsx, home.css
+      sections/               HeroSection, MissionSection, ConcernsSection, ValuesSection
+    about/                    AboutPage.tsx
+      sections/               WhyWeExistSection, HowWeWorkSection, ExpectationsSection
+    therapists/               TherapistsPage.tsx, therapists.css
+      components/             TherapistFilters, TherapistCard, NoResults
+    team/                     TeamPage.tsx, team.css
+      sections/               LeadershipSection, CareTeamSection, JoinUsSection
+    contact/                  ContactPage.tsx, contact.css
+      components/             ContactForm, ContactDetails
+    consultation/             ConsultationPage.tsx, consultation.css
+      components/             HowItWorks, ConsultationForm
+
+  data/                       site, therapists, team   (edit content here)
+  lib/                        submit.ts (form backend hook-up), smoothScroll.ts
+  hooks/                      usePageTitle.ts
+  styles/                     index.css → tokens, base, buttons, chips, forms (global styles)
+  assets/logos/               primary mark + secondary lockup, colour and white
 ```
+
+To add a page: create `src/pages/<name>/<Name>Page.tsx`, add a route in `src/app/App.tsx` and a link in `navigation` in `src/data/site.ts`.

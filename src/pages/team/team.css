@@ -1,0 +1,72 @@
+/* Team page */
+
+.leaders {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  margin-top: 2rem;
+}
+
+.leader {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  grid-template-columns: minmax(0, 200px) minmax(0, 38rem);
+  align-items: end;
+}
+
+.leader__name {
+  font-size: var(--fs-h3);
+}
+
+.leader__role {
+  margin-block: 0.25rem 0.875rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 560px) {
+  .leader {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .leader .portrait {
+    max-width: 180px;
+  }
+}
+
+.crew {
+  display: grid;
+  gap: 2.5rem 1.75rem;
+  margin-top: 2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.crew__member {
+  display: grid;
+  gap: 0.5rem;
+  align-content: start;
+}
+
+.crew__member .portrait {
+  max-width: 140px;
+  margin-bottom: 0.75rem;
+}
+
+.crew__name {
+  font-size: var(--fs-h4);
+}
+
+.crew__role {
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 860px) {
+  .crew {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .crew {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -42,6 +42,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
 }
 
 h1,
@@ -81,8 +82,10 @@ a {
   text-underline-offset: 0.2em;
 }
 
-a:hover {
-  color: var(--ink);
+@media (hover: hover) {
+  a:hover {
+    color: var(--ink);
+  }
 }
 
 button,
@@ -91,6 +94,15 @@ select,
 textarea {
   font: inherit;
   color: inherit;
+}
+
+/* No grey flash on tap, and no double-tap zoom delay on controls */
+a,
+button,
+label,
+select {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 address {

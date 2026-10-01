@@ -1,0 +1,62 @@
+/* Chips, tags and lists */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  min-height: 44px;
+  padding: 0 1.125rem;
+  border: 2px solid var(--field-border);
+  border-radius: var(--r-pill);
+  background: var(--white);
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+@media (hover: hover) {
+  .chip:hover {
+    border-color: var(--c03-indigo);
+  }
+}
+
+.chip[aria-pressed="true"] {
+  border-color: var(--c07-navy);
+  background: var(--c07-navy);
+  color: var(--c05-off-white);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.tag-list li {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--c04-peach) 70%, var(--white));
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.mode-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem 1rem;
+  font-size: var(--fs-small);
+  font-weight: 700;
+}
+
+.mode-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--ink-soft);
+}

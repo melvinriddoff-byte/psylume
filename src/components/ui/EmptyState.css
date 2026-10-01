@@ -1,0 +1,40 @@
+/* Empty state: no results, missing page, nothing published yet */
+
+.empty-state {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+  max-width: 36rem;
+  padding-block: 2rem;
+}
+
+.empty-state__icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--c04-peach);
+  color: var(--c07-navy);
+}
+
+.empty-state__text {
+  display: grid;
+  gap: 0.75rem;
+  color: var(--ink-soft);
+}
+
+.empty-state .button-row {
+  margin-top: 0.5rem;
+}
+
+.link-list {
+  display: grid;
+}
+
+.link-list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 700;
+}

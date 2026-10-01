@@ -10,14 +10,15 @@ export const site = {
   tagline: "Light within · Life within",
   summary:
     "Psylume is a psychotherapy consultation platform, online and in person, for adults facing everyday emotional and relational struggles.",
-  email: "hello@psylume.in", // TODO: confirm address
-  phone: { display: "+91 00000 00000", href: "tel:+910000000000" }, // TODO: real number
-  address: ["Psylume Clinic", "Street address, City", "Kerala, India"], // TODO: real address
-  hours: "Monday to Saturday, 9:00 am to 7:00 pm", // TODO: confirm hours
+  email: "demopsylume@gmail.com",
+  phone: { display: "+91 95265 55590", href: "tel:+919526555590" },
+  address: ["Psylume, Arakkal", "Perumpilavu, Thrissur 680519", "Kerala, India"],
+  hours: "9:00 am to 7:00 pm",
   responseTime: "one working day", // TODO: only promise what the team can keep
-  instagram: { handle: "@psylume.in", url: "https://www.instagram.com/psylume.in" }, // TODO: real Instagram URL
-  whatsapp: { url: "https://wa.me/910000000000" }, // TODO: real number, digits only with country code
-  linkedin: { url: "https://www.linkedin.com/company/psylume" }, // TODO: real LinkedIn URL
+  whatsapp: { url: "https://wa.me/919526555590" },
+  // Social links: set the url to null to hide the link everywhere.
+  instagram: { handle: "@psylume.in" as string | null, url: "https://www.instagram.com/psylume.in" as string | null }, // TODO: confirm account
+  linkedin: { url: "https://www.linkedin.com/company/psylume" as string | null }, // TODO: page returns 404 until it is created
 } as const;
 
 /** Header label, footer label and path for each page. */

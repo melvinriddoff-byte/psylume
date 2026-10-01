@@ -1,0 +1,61 @@
+/* Hero arch artwork */
+
+.arches {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.arches__shape {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+
+.arches__shape--pop {
+  transform-origin: 50% 50%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .arches__shape {
+    animation: arch-rise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+  .arches__shape--coral {
+    animation-delay: 0.08s;
+  }
+  .arches__shape--peach {
+    animation-delay: 0.18s;
+  }
+  .arches__shape--pop {
+    animation-name: arch-pop;
+    animation-duration: 0.6s;
+    animation-delay: 0.6s;
+  }
+  .arches__shape--star {
+    animation-delay: 0.75s;
+  }
+  .arches__shape--spark {
+    animation-delay: 0.9s;
+  }
+}
+
+@keyframes arch-rise {
+  from {
+    transform: scaleY(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes arch-pop {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,68 @@
+/* Consultation page */
+
+.consult {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: start;
+}
+
+.consult__steps {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 901px) {
+  .consult__steps {
+    position: sticky;
+    top: calc(var(--header-h) + 1.5rem);
+  }
+}
+
+@media (max-width: 900px) {
+  .consult {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Small laptops: the form column is too narrow for paired fields */
+@media (min-width: 901px) and (max-width: 1120px) {
+  .consult .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.steps {
+  display: grid;
+  gap: 1.5rem;
+  counter-reset: step;
+}
+
+.step {
+  position: relative;
+  display: grid;
+  gap: 0.25rem;
+  padding-left: 3.75rem;
+  counter-increment: step;
+}
+
+.step::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--c01-coral);
+  color: var(--c07-navy);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.step__title {
+  font-size: var(--fs-h4);
+}

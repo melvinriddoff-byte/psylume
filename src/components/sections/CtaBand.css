@@ -1,0 +1,58 @@
+/* Call-to-action band with arch shapes */
+
+.cta-band {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(3.5rem, 8vw, 6rem);
+  background: var(--c03-indigo);
+  color: var(--c05-off-white);
+}
+
+.cta-band::before,
+.cta-band::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  border-radius: var(--r-arch);
+  pointer-events: none;
+}
+
+.cta-band::before {
+  right: clamp(-4rem, 3vw, 4rem);
+  width: clamp(120px, 16vw, 220px);
+  height: clamp(180px, 24vw, 330px);
+  background: var(--c01-coral);
+}
+
+.cta-band::after {
+  right: clamp(4rem, 14vw, 15rem);
+  width: clamp(80px, 10vw, 150px);
+  height: clamp(120px, 15vw, 220px);
+  background: var(--c04-peach);
+}
+
+.cta-band__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 2rem;
+  max-width: 44rem;
+  margin-inline: max(var(--gutter), calc((100% - var(--container)) / 2));
+  width: auto;
+}
+
+.cta-band .lead {
+  margin-top: 1rem;
+  color: var(--c04-peach);
+}
+
+.cta-band :focus-visible {
+  outline-color: var(--c06-gold);
+}
+
+@media (max-width: 700px) {
+  .cta-band::before,
+  .cta-band::after {
+    opacity: 0.35;
+  }
+}
