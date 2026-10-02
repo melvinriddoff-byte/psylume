@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="site-footer__brand">
           {/* Secondary logo (white lockup) */}
           <Link to="/" aria-label="Psylume, home">
-            <img src={lockupWhite} alt="" width={260} height={97} />
+            <img src={lockupWhite} alt="" width={260} height={77} />
           </Link>
           <p>{site.summary}</p>
           <ul className="site-footer__social" aria-label="Psylume on social media">
@@ -80,7 +80,7 @@ export default function Footer() {
       </div>
 
       {/* Primary logo (white mark) as a quiet watermark */}
-      <img className="site-footer__watermark" src={markWhite} alt="" aria-hidden="true" width={296} height={360} />
+      <img className="site-footer__watermark" src={markWhite} alt="" aria-hidden="true" width={296} height={359} />
     </footer>
   );
 }

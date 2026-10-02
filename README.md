@@ -20,8 +20,8 @@ Requires Node 18 or newer.
 | Brand-book item | Where it lives |
 | --- | --- |
 | Colour palette 01 to 08, in order | `src/styles/tokens.css` (`--c01-coral` … `--c08-black`) |
-| Primary font: Bricolage Grotesque (headlines) | `--font-display` in `tokens.css`, loaded in `index.html` |
-| Secondary font: Satoshi (body) | `--font-body` in `tokens.css`, loaded in `index.html` |
+| Primary font: Bricolage Grotesque (headlines) | `--font-display` in `tokens.css`, self-hosted via `fonts.css` |
+| Secondary font: Satoshi (body) | `--font-body` in `tokens.css`, self-hosted via `fonts.css` |
 | Malayalam font: Anek Malayalam | fallback in both font stacks, so Malayalam text renders in the brand face |
 | Secondary logo (horizontal lockup) | Header (tablet and up) and Footer (white version) |
 | Primary logo (mark) | Header (phones) and Footer (white watermark) |
@@ -32,15 +32,27 @@ Colour notes:
 - Palette value `06` (`#F1B23C`) was read from the brand book's extracted text, which was partly garbled. Please confirm it against the source file.
 - Coral `#FF6B6B` fails contrast with white text, so buttons use navy text on coral (5.4:1). Coral is used as a fill, never as body text.
 
-### Font licences
+### Fonts
 
-- **Bricolage Grotesque** and **Anek Malayalam**: SIL Open Font License, free for commercial use. Served from Google Fonts.
-- **Satoshi**: Fontshare (ITF Free Font License), free for commercial use. Served from Fontshare's own API, which the licence allows. Do not re-upload the font files to a public server.
-- **Brittany Signature** (the decorative script in the brand book) is **not used** in this site. Its free version is licensed for personal use only. If you want it on the website, buy a commercial licence from Creatype Studio first.
+Brand fonts are self-hosted from the **BRANDING KIT PSYLUME** folder (`src/assets/fonts/`, loaded by `src/styles/fonts.css`). No font is fetched from Google or Fontshare except Anek Malayalam.
+
+- **Bricolage Grotesque** (headlines): SIL Open Font License. Converted from the kit's variable TTF to a Latin-only WOFF2 (weights 400 to 700), which the OFL allows. Licence: `src/assets/fonts/BricolageGrotesque-OFL.txt`.
+- **Satoshi** (body): ITF Free Font License. Uses Fontshare's official WOFF2 web files (Regular, Medium, Bold) unchanged, because the licence forbids converting or subsetting the font. Self-hosting on our own site is allowed, but **public redistribution is not, so this repository must stay private.** Licence: `src/assets/fonts/Satoshi-LICENSE.txt`.
+- **Anek Malayalam**: not in the kit, so it still loads from Google Fonts, and only on pages that contain Malayalam text.
+- **Brittany Signature** (the decorative script in the brand book) is **not used**. Its free version is for personal use only.
 
 ### Logos
 
-The logo files in `src/assets/logos/` (lossless WebP) were extracted from the brand-book PDF at high resolution and made transparent. For the sharpest result, replace them with the original SVG or PNG exports from your design source, keeping the same file names.
+From the kit's `LOGO` folder, saved as lossless WebP in `src/assets/logos/`:
+
+| Website file | Kit source | Used in |
+| --- | --- | --- |
+| `psylume-logo-lockup.webp` | `CORAL DARK LS.png` | Header (tablet and up) |
+| `psylume-logo-mark.webp` | mark from `LOGO CORAL DARK.png` | Header (phones) |
+| `psylume-logo-lockup-white.webp` | `WHITE LS.png` | Footer |
+| `psylume-logo-mark-white.webp` | mark from `LOGO WHITE.png` | Footer watermark |
+
+The favicon, app icons and `og-image.png` in `public/` are made from the same mark and the coral horizontal logo.
 
 ## Placeholder content to replace before launch
 

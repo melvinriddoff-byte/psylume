@@ -1,0 +1,38 @@
+/* Brand fonts, self-hosted from the Psylume branding kit
+   Headlines: Bricolage Grotesque (SIL Open Font License, see assets/fonts/BricolageGrotesque-OFL.txt)
+   Body:      Satoshi (ITF Free Font License, official Fontshare web files, see assets/fonts/Satoshi-LICENSE.txt)
+              The Satoshi licence allows self-hosting on our own site, but not public redistribution:
+              keep this repository private. */
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../assets/fonts/BricolageGrotesque-Variable.woff2") format("woff2-variations"),
+    url("../assets/fonts/BricolageGrotesque-Variable.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

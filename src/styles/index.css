@@ -1,5 +1,6 @@
 /* Global styles. Component and page styles sit next to their components. */
 
+@import "./fonts.css";
 @import "./tokens.css";
 @import "./base.css";
 @import "./buttons.css";

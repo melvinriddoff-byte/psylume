@@ -48,7 +48,7 @@ export default function Header() {
       <div className="container site-header__bar">
         <Link to="/" className="brand" aria-label="Psylume, home">
           {/* Secondary logo: horizontal lockup, shown from tablet up */}
-          <img className="brand__lockup" src={lockup} alt="" width={149} height={56} />
+          <img className="brand__lockup" src={lockup} alt="" width={173} height={52} />
           {/* Primary logo: the mark, shown on small screens */}
           <img className="brand__mark" src={mark} alt="" width={46} height={56} />
         </Link>
