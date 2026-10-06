@@ -67,44 +67,29 @@ html.menu-open .back-to-top {
   transform: scale(0.94);
 }
 
-/* Pointer animation: the arrow gently nudges upward, and leaps on hover */
+/* Arrow motion: a slow, breathing float; on hover it lifts and holds */
+.back-to-top__arrow {
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .back-to-top[data-visible="true"] .back-to-top__arrow {
-    animation: arrow-nudge 1.8s ease-in-out infinite;
+    animation: arrow-float 3.2s ease-in-out infinite;
   }
 
   .back-to-top:hover .back-to-top__arrow,
   .back-to-top:focus-visible .back-to-top__arrow {
-    animation: arrow-leap 0.7s cubic-bezier(0.3, 0.7, 0.4, 1) infinite;
+    animation: none;
+    transform: translateY(-5px);
   }
 }
 
-@keyframes arrow-nudge {
+@keyframes arrow-float {
   0%,
-  60%,
   100% {
-    transform: translateY(0);
+    transform: translateY(1.5px);
   }
-  30% {
-    transform: translateY(-4px);
-  }
-}
-
-@keyframes arrow-leap {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  45% {
-    transform: translateY(-14px);
-    opacity: 0;
-  }
-  46% {
-    transform: translateY(14px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+  50% {
+    transform: translateY(-3px);
   }
 }
