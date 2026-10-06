@@ -86,9 +86,11 @@
   }
 }
 
-/* The page behind the open mobile menu does not scroll */
-html.menu-open,
-html.menu-open body {
+/* The page behind the open mobile menu does not scroll.
+   Only <html> is locked: hiding overflow on <body> too turns <body> into its own
+   scroll box, and the sticky header then jumps back to the top of the page,
+   taking the open menu off screen. */
+html.menu-open {
   overflow: hidden;
 }
 
