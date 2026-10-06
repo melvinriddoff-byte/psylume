@@ -29,3 +29,9 @@ export function scrollToTop(): void {
   if (lenis) lenis.scrollTo(0, { immediate: true, force: true });
   else window.scrollTo({ top: 0, left: 0, behavior: "instant" });
 }
+
+/** Glide back to the top, e.g. from the back-to-top button. */
+export function glideToTop(): void {
+  if (lenis) lenis.scrollTo(0, { duration: 1.2 });
+  else window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+}

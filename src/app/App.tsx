@@ -3,6 +3,7 @@ import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import ScrollManager from "../components/layout/ScrollManager";
 import SmoothScroll from "../components/layout/SmoothScroll";
+import BackToTop from "../components/layout/BackToTop";
 import ErrorBoundary from "../components/layout/ErrorBoundary";
 import HomePage from "../pages/home/HomePage";
 import AboutPage from "../pages/about/AboutPage";
@@ -38,6 +39,7 @@ export default function App() {
         </ErrorBoundary>
       </main>
       <Footer />
+      <BackToTop />
     </>
   );
 }
