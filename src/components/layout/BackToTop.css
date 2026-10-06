@@ -10,7 +10,7 @@
   width: 52px;
   height: 52px;
   padding: 0;
-  border: 2px solid var(--c05-off-white);
+  border: 0;
   border-radius: 50%;
   overflow: hidden;
   background: var(--c01-coral);
@@ -65,31 +65,4 @@ html.menu-open .back-to-top {
 
 .back-to-top:active {
   transform: scale(0.94);
-}
-
-/* Arrow motion: a slow, breathing float; on hover it lifts and holds */
-.back-to-top__arrow {
-  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .back-to-top[data-visible="true"] .back-to-top__arrow {
-    animation: arrow-float 3.2s ease-in-out infinite;
-  }
-
-  .back-to-top:hover .back-to-top__arrow,
-  .back-to-top:focus-visible .back-to-top__arrow {
-    animation: none;
-    transform: translateY(-5px);
-  }
-}
-
-@keyframes arrow-float {
-  0%,
-  100% {
-    transform: translateY(1.5px);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
 }
