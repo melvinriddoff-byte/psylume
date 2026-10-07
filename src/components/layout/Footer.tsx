@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Clock, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { navigation, site } from "../../data/site";
 import WhatsApp from "../icons/WhatsAppIcon";
 import lockupWhite from "../../assets/logos/psylume-logo-lockup-white.webp";
@@ -29,10 +29,10 @@ export default function Footer() {
                 <WhatsApp aria-hidden="true" size={20} />
               </a>
             </li>
-            {site.linkedin.url ? (
+            {site.facebook.url ? (
               <li>
-                <a href={site.linkedin.url} rel="noopener noreferrer" target="_blank" aria-label="LinkedIn">
-                  <Linkedin aria-hidden="true" size={20} />
+                <a href={site.facebook.url} rel="noopener noreferrer" target="_blank" aria-label="Facebook">
+                  <Facebook aria-hidden="true" size={20} />
                 </a>
               </li>
             ) : null}
@@ -65,10 +65,6 @@ export default function Footer() {
             <li>
               <MapPin aria-hidden="true" size={18} />
               <span>{site.address.join(", ")}</span>
-            </li>
-            <li>
-              <Clock aria-hidden="true" size={18} />
-              <span>{site.hours}</span>
             </li>
           </ul>
         </div>

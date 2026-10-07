@@ -1,0 +1,236 @@
+/* Blogs: article list, cards and the article page */
+
+.blog-filters {
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.blog-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.blog-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 1000px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-grid,
+  .blog-grid--two {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Card */
+
+.blog-card {
+  display: flex;
+}
+
+.blog-card__link {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--white);
+  color: var(--ink);
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+@media (hover: hover) {
+  .blog-card__link:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .blog-card__link:hover .blog-card__more svg {
+    transform: translateX(4px);
+  }
+}
+
+.blog-card__link:focus-visible {
+  border-radius: var(--r-lg);
+}
+
+/* Cover: brand arches on a tone colour */
+.blog-card__cover {
+  position: relative;
+  aspect-ratio: 16 / 8;
+  overflow: hidden;
+}
+
+.blog-card__cover--coral {
+  background: var(--c01-coral);
+  --arch: var(--c04-peach);
+  --arch-2: var(--c07-navy);
+  --star: var(--c07-navy);
+}
+
+.blog-card__cover--mauve {
+  background: var(--c02-mauve);
+  --arch: var(--c04-peach);
+  --arch-2: var(--c03-indigo);
+  --star: var(--c05-off-white);
+}
+
+.blog-card__cover--indigo {
+  background: var(--c03-indigo);
+  --arch: var(--c01-coral);
+  --arch-2: var(--c04-peach);
+  --star: var(--c06-gold);
+}
+
+.blog-card__cover--peach {
+  background: var(--c04-peach);
+  --arch: var(--c03-indigo);
+  --arch-2: var(--c01-coral);
+  --star: var(--c07-navy);
+}
+
+.blog-card__arch {
+  position: absolute;
+  bottom: 0;
+  right: 14%;
+  width: 26%;
+  height: 78%;
+  border-radius: var(--r-arch);
+  background: var(--arch);
+}
+
+.blog-card__arch--small {
+  right: 36%;
+  width: 17%;
+  height: 46%;
+  background: var(--arch-2);
+}
+
+.blog-card__star {
+  position: absolute;
+  left: 12%;
+  top: 22%;
+  width: 9%;
+  color: var(--star);
+}
+
+.blog-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.625rem;
+  padding: clamp(1.25rem, 2.4vw, 1.75rem);
+}
+
+.blog-card__category,
+.post__category {
+  font-size: var(--fs-small);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.blog-card__title {
+  font-size: var(--fs-h4);
+  line-height: 1.2;
+}
+
+.blog-card__excerpt {
+  color: var(--ink-soft);
+}
+
+.blog-card__meta,
+.post__meta {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+.blog-card__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-weight: 700;
+}
+
+.blog-card__more svg {
+  color: var(--c01-coral);
+  transition: transform 0.2s ease;
+}
+
+/* Article page */
+
+.post__narrow {
+  max-width: 46rem;
+}
+
+.post__header {
+  padding-block: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.post__header .container {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+}
+
+.post__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-height: 44px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.post__title {
+  font-size: var(--fs-h2);
+  letter-spacing: -0.03em;
+}
+
+.post__body {
+  display: grid;
+  gap: 1.25rem;
+  padding-bottom: var(--section);
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.post__body h2 {
+  margin-top: 1rem;
+  font-size: var(--fs-h3);
+}
+
+.post__body ul {
+  display: grid;
+  gap: 0.625rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.post__body li::marker {
+  color: var(--c01-coral);
+}
+
+.post__disclaimer {
+  margin-top: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+.related__title {
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}

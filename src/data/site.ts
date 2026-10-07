@@ -19,6 +19,7 @@ export const site = {
   // Social links: set the url to null to hide the link everywhere.
   instagram: { handle: "@psylume.in" as string | null, url: "https://www.instagram.com/psylume.in" as string | null }, // TODO: confirm account
   linkedin: { url: "https://www.linkedin.com/company/psylume" as string | null }, // TODO: page returns 404 until it is created
+  facebook: { url: "https://www.facebook.com/psylume" as string | null }, // TODO: confirm the real Facebook page URL
 } as const;
 
 /** Header label, footer label and path for each page. */
@@ -26,7 +27,9 @@ export const navigation = [
   { to: "/", label: "Home", footerLabel: "Home" },
   { to: "/about", label: "About us", footerLabel: "About us" },
   { to: "/therapists", label: "Therapists", footerLabel: "Therapists" },
-  { to: "/team", label: "Team", footerLabel: "Team" },
+  // Team page (/team) is hidden for now: its files stay in src/pages/team. Add this line back to show it.
+  // { to: "/team", label: "Team", footerLabel: "Team" },
+  { to: "/blogs", label: "Blogs", footerLabel: "Blogs" },
   { to: "/contact", label: "Contact", footerLabel: "Contact" },
   { to: "/consultation", label: "Book a consultation", footerLabel: "Consultation" },
 ] as const;

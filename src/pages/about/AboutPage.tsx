@@ -25,13 +25,13 @@ export default function AboutPage() {
       <CtaBand
         id="about-cta-title"
         title="Meet the people behind Psylume."
-        lead="Get to know our therapists and team, or book a consultation when you are ready."
+        lead="Get to know our therapists, or book a consultation when you are ready."
       >
         <Link to="/consultation" className="btn btn--primary">
           Book a consultation
         </Link>
-        <Link to="/team" className="btn btn--outline-light">
-          Meet the team
+        <Link to="/therapists" className="btn btn--outline-light">
+          Meet our therapists
         </Link>
       </CtaBand>
     </>

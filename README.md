@@ -2,7 +2,7 @@
 
 React + TypeScript (Vite) website built from the **Psylume Brand Identity 2026** book.
 
-Pages: **Home**, **About us**, **Therapists**, **Team**, **Contact**, **Consultation** and a **404** page, plus the shared **Header** and **Footer**.
+Pages: **Home**, **About us**, **Therapists**, **Blogs** (list + article pages), **Contact**, **Consultation** and a **404** page, plus the shared **Header** and **Footer**. The **Team** page still exists in `src/pages/team/` but is hidden (no route or menu link); see the comments in `src/app/App.tsx` and `src/data/site.ts` to bring it back.
 
 ## Run it
 
@@ -60,7 +60,9 @@ All of this is fictional or unconfirmed:
 
 - `src/data/site.ts`: contact details are real (added October 2026). Still to confirm: the response-time promise and the Instagram and LinkedIn links (the LinkedIn page returned 404 in October 2026). Set either to `null` to hide it.
 - `src/data/therapists.ts`: every therapist (names, credentials, approaches, languages). **Only publish verified practitioners and credentials.**
-- `src/data/team.ts`: every team member.
+- `src/data/team.ts`: every team member (page currently hidden).
+- `src/data/blogs.ts`: six **demo** blog posts. Have them reviewed by a clinician or replace them before launch.
+- Facebook URL in `src/data/site.ts` is a guess (`facebook.com/psylume`); confirm it.
 - Portraits are arch-shaped initials. Swap in photos inside `ArchPortrait.tsx`.
 - Copy on the Consultation page ("we only use your details to arrange your consultation", reply times) should be reviewed against your real privacy policy and operations.
 
@@ -109,14 +111,16 @@ src/
       sections/               WhyWeExistSection, HowWeWorkSection, ExpectationsSection
     therapists/               TherapistsPage.tsx, therapists.css
       components/             TherapistFilters, TherapistCard, NoResults
-    team/                     TeamPage.tsx, team.css
+    blogs/                    BlogsPage.tsx (list), BlogPostPage.tsx (article), blogs.css
+      components/             BlogCard
+    team/                     TeamPage.tsx, team.css   (hidden: not routed)
       sections/               LeadershipSection, CareTeamSection, JoinUsSection
     contact/                  ContactPage.tsx, contact.css
       components/             ContactForm, ContactDetails
     consultation/             ConsultationPage.tsx, consultation.css
       components/             HowItWorks, ConsultationForm
 
-  data/                       site, therapists, team   (edit content here)
+  data/                       site, therapists, team, blogs   (edit content here)
   lib/                        submit.ts (form backend hook-up), smoothScroll.ts
   hooks/                      usePageTitle.ts
   styles/                     index.css → tokens, base, buttons, chips, forms (global styles)
