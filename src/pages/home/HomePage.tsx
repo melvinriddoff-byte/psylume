@@ -1,7 +1,5 @@
-import CtaBand from "../../components/sections/CtaBand";
-import WhatsApp from "../../components/icons/WhatsAppIcon";
+import ConsultationCta from "../../components/sections/ConsultationCta";
 import usePageMeta from "../../hooks/usePageMeta";
-import { site } from "../../data/site";
 import HeroSection from "./sections/HeroSection";
 import MissionSection from "./sections/MissionSection";
 import TherapistsSection from "./sections/TherapistsSection";
@@ -20,20 +18,11 @@ export default function HomePage() {
       <MissionSection />
       <TherapistsSection />
       <ValuesSection />
-      <CtaBand
+      <ConsultationCta
         id="cta-title"
         title="You’re one call away from calm."
         lead="Tell us a little about what’s going on. We’ll suggest a therapist and a time that works for you."
-      >
-        <a href={site.whatsapp.bookingUrl} className="btn btn--primary" target="_blank" rel="noopener noreferrer">
-          <WhatsApp aria-hidden="true" size={20} />
-          Book a consultation
-          <span className="sr-only"> on WhatsApp</span>
-        </a>
-        <a href={site.phone.href} className="btn btn--outline-light">
-          Call {site.phone.display}
-        </a>
-      </CtaBand>
+      />
     </>
   );
 }

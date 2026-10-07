@@ -34,7 +34,8 @@ export const navigation = [
   { to: "/therapists", label: "Therapists", footerLabel: "Therapists" },
   // Team page (/team) is hidden for now: its files stay in src/pages/team. Add this line back to show it.
   // { to: "/team", label: "Team", footerLabel: "Team" },
-  { to: "/blogs", label: "Blogs", footerLabel: "Blogs" },
+  // Blogs page (/blogs) is hidden for now: its files stay in src/pages/blogs. Add this line back to show it.
+  // { to: "/blogs", label: "Blogs", footerLabel: "Blogs" },
   { to: "/contact", label: "Contact", footerLabel: "Contact" },
   { to: "/consultation", label: "Book a consultation", footerLabel: "Consultation" },
 ] as const;

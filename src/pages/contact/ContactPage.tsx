@@ -1,4 +1,5 @@
 import PageIntro from "../../components/sections/PageIntro";
+import ConsultationCta from "../../components/sections/ConsultationCta";
 import usePageMeta from "../../hooks/usePageMeta";
 import ContactForm from "./components/ContactForm";
 import ContactDetails from "./components/ContactDetails";
@@ -24,6 +25,12 @@ export default function ContactPage() {
           <ContactDetails />
         </div>
       </section>
+
+      <ConsultationCta
+        id="contact-cta-title"
+        title="Meet the people behind Psylume."
+        lead="Get to know our therapists, or book a consultation when you are ready."
+      />
     </>
   );
 }

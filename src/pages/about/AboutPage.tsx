@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import PageIntro from "../../components/sections/PageIntro";
-import CtaBand from "../../components/sections/CtaBand";
+import ConsultationCta from "../../components/sections/ConsultationCta";
 import usePageMeta from "../../hooks/usePageMeta";
 import WhyWeExistSection from "./sections/WhyWeExistSection";
 import HowWeWorkSection from "./sections/HowWeWorkSection";
@@ -22,18 +21,11 @@ export default function AboutPage() {
       <WhyWeExistSection />
       <HowWeWorkSection />
       <ExpectationsSection />
-      <CtaBand
+      <ConsultationCta
         id="about-cta-title"
         title="Meet the people behind Psylume."
         lead="Get to know our therapists, or book a consultation when you are ready."
-      >
-        <Link to="/consultation" className="btn btn--primary">
-          Book a consultation
-        </Link>
-        <Link to="/therapists" className="btn btn--outline-light">
-          Meet our therapists
-        </Link>
-      </CtaBand>
+      />
     </>
   );
 }

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { navigation, site } from "../../data/site";
 import WhatsApp from "../icons/WhatsAppIcon";
-import lockupWhite from "../../assets/logos/psylume-logo-lockup-white.webp";
+import lockup from "../../assets/logos/psylume-logo-lockup-footer.webp";
 import markWhite from "../../assets/logos/psylume-logo-mark-white.webp";
 import "./Footer.css";
 
@@ -11,9 +11,9 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container site-footer__grid">
         <div className="site-footer__brand">
-          {/* Secondary logo (white lockup) */}
+          {/* Footer logo: lockup on the footer navy */}
           <Link to="/" aria-label="Psylume, home">
-            <img src={lockupWhite} alt="" width={260} height={77} />
+            <img src={lockup} alt="" width={260} height={96} />
           </Link>
           <p>{site.summary}</p>
           <ul className="site-footer__social" aria-label="Psylume on social media">

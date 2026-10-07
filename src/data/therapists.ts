@@ -14,6 +14,9 @@ export interface Therapist {
   name: string;
   initials: string;
   role: string;
+  /** One or two lines shown on the card. */
+  summary: string;
+  /** Longer text shown under "More details". */
   approach: string;
   concerns: ConcernId[];
   modes: Mode[];
@@ -28,75 +31,29 @@ export const modeLabels: Record<Mode, string> = {
 
 export const therapists: Therapist[] = [
   {
-    id: "meera-nair",
-    name: "Dr. Meera Nair",
-    initials: "MN",
-    role: "Clinical psychologist",
+    id: "jazbiya",
+    name: "Jazbiya",
+    initials: "J",
+    role: "Psychotherapist",
+    summary: "Calm, practical support for anxiety, stress and burnout.",
     approach:
-      "Practical, structured sessions using cognitive behavioural therapy. She helps you notice the loops your mind runs and try something different between sessions.",
+      "Structured, unhurried sessions that help you notice the patterns your mind repeats and try something different between sessions. Jazbiya listens first and works at the pace you set.",
     concerns: ["anxiety", "burnout"],
-    modes: ["online", "in-person"],
+    modes: ["online"],
     languages: ["English", "Malayalam"],
     tone: "coral",
   },
   {
-    id: "arjun-varma",
-    name: "Arjun Varma",
-    initials: "AV",
+    id: "najih",
+    name: "Najih",
+    initials: "N",
     role: "Counselling psychologist",
+    summary: "A person-centred space to think out loud and feel heard.",
     approach:
-      "A person-centred approach with lots of room to think out loud. Arjun listens first and works at the pace you set.",
+      "A person-centred approach with plenty of room to think out loud. Najih helps with low mood, self-worth and relationships, and sessions follow what you need that day.",
     concerns: ["mood", "self-worth"],
     modes: ["online"],
     languages: ["English", "Malayalam", "Hindi"],
-    tone: "indigo",
-  },
-  {
-    id: "sneha-thomas",
-    name: "Sneha Thomas",
-    initials: "ST",
-    role: "Couples and family therapist",
-    approach:
-      "Works with partners and families on communication, trust and the patterns that repeat at home. Individual sessions are welcome too.",
-    concerns: ["relationships", "grief"],
-    modes: ["online", "in-person"],
-    languages: ["English", "Malayalam"],
-    tone: "peach",
-  },
-  {
-    id: "rahul-menon",
-    name: "Rahul Menon",
-    initials: "RM",
-    role: "Psychotherapist",
-    approach:
-      "Uses acceptance and commitment therapy to help you make space for hard feelings while still moving toward the life you want.",
-    concerns: ["anxiety", "burnout", "self-worth"],
-    modes: ["online"],
-    languages: ["English", "Malayalam"],
-    tone: "mauve",
-  },
-  {
-    id: "fathima-rasheed",
-    name: "Fathima Rasheed",
-    initials: "FR",
-    role: "Grief and bereavement counsellor",
-    approach:
-      "Gentle, unhurried support after a loss. There is no right way or timeline to grieve, and sessions follow what you need that day.",
-    concerns: ["grief", "mood"],
-    modes: ["in-person", "online"],
-    languages: ["English", "Malayalam", "Arabic"],
-    tone: "coral",
-  },
-  {
-    id: "anand-krishnan",
-    name: "Anand Krishnan",
-    initials: "AK",
-    role: "Mindfulness-based therapist",
-    approach:
-      "Combines talk therapy with simple mindfulness practices you can use at your desk, on the bus or in the middle of a bad night.",
-    concerns: ["anxiety", "mood", "relationships"],
-    modes: ["in-person"],
-    languages: ["English", "Malayalam", "Tamil"],
     tone: "indigo",
   },
 ];

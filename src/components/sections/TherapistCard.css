@@ -52,3 +52,55 @@
   font-size: var(--fs-small);
   color: var(--ink-soft);
 }
+
+.t-card__summary {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+.t-card .mode-list {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--ink-soft);
+}
+
+.t-card .mode-list span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.t-card__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-weight: 700;
+  color: var(--c07-navy);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  cursor: pointer;
+}
+
+.t-card__toggle svg {
+  transition: transform 0.2s ease;
+}
+
+.t-card__toggle[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+.t-card__more {
+  display: grid;
+  gap: 0.875rem;
+  justify-items: start;
+}
+
+.t-card__more[hidden] {
+  display: none;
+}

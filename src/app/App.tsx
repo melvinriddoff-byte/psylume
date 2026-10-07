@@ -8,8 +8,6 @@ import ErrorBoundary from "../components/layout/ErrorBoundary";
 import HomePage from "../pages/home/HomePage";
 import AboutPage from "../pages/about/AboutPage";
 import TherapistsPage from "../pages/therapists/TherapistsPage";
-import BlogsPage from "../pages/blogs/BlogsPage";
-import BlogPostPage from "../pages/blogs/BlogPostPage";
 import ContactPage from "../pages/contact/ContactPage";
 import ConsultationPage from "../pages/consultation/ConsultationPage";
 import NotFoundPage from "../pages/not-found/NotFoundPage";
@@ -34,8 +32,8 @@ export default function App() {
             <Route path="/therapists" element={<TherapistsPage />} />
             <Route path="/consultation" element={<ConsultationPage />} />
             {/* Team page hidden for now (src/pages/team). Restore: <Route path="/team" element={<TeamPage />} /> */}
-            <Route path="/blogs" element={<BlogsPage />} />
-            <Route path="/blogs/:slug" element={<BlogPostPage />} />
+            {/* Blogs hidden for now (src/pages/blogs). Restore: import BlogsPage and BlogPostPage, then add
+                <Route path="/blogs" element={<BlogsPage />} /> and <Route path="/blogs/:slug" element={<BlogPostPage />} /> */}
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
