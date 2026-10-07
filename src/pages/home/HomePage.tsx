@@ -1,4 +1,5 @@
 import CtaBand from "../../components/sections/CtaBand";
+import WhatsApp from "../../components/icons/WhatsAppIcon";
 import usePageMeta from "../../hooks/usePageMeta";
 import { site } from "../../data/site";
 import HeroSection from "./sections/HeroSection";
@@ -25,8 +26,9 @@ export default function HomePage() {
         lead="Tell us a little about what’s going on. We’ll suggest a therapist and a time that works for you."
       >
         <a href={site.whatsapp.bookingUrl} className="btn btn--primary" target="_blank" rel="noopener noreferrer">
-          Book a consultation
-          <span className="sr-only"> on WhatsApp (opens WhatsApp)</span>
+          <WhatsApp aria-hidden="true" size={20} />
+          Book A Session
+          <span className="sr-only"> on WhatsApp</span>
         </a>
         <a href={site.phone.href} className="btn btn--outline-light">
           Call {site.phone.display}
