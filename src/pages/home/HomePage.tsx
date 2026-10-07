@@ -3,7 +3,7 @@ import usePageMeta from "../../hooks/usePageMeta";
 import { site } from "../../data/site";
 import HeroSection from "./sections/HeroSection";
 import MissionSection from "./sections/MissionSection";
-import ConcernsSection from "./sections/ConcernsSection";
+import TherapistsSection from "./sections/TherapistsSection";
 import ValuesSection from "./sections/ValuesSection";
 import "./home.css";
 
@@ -17,7 +17,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <MissionSection />
-      <ConcernsSection />
+      <TherapistsSection />
       <ValuesSection />
       <CtaBand
         id="cta-title"

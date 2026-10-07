@@ -5,7 +5,7 @@ import usePageMeta from "../../hooks/usePageMeta";
 import { isConcernId } from "../../data/site";
 import { therapists } from "../../data/therapists";
 import TherapistFilters, { type ConcernFilter, type ModeFilter } from "./components/TherapistFilters";
-import TherapistCard from "./components/TherapistCard";
+import TherapistCard from "../../components/sections/TherapistCard";
 import NoResults from "./components/NoResults";
 import "./therapists.css";
 

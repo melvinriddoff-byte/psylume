@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { MapPin, Video } from "lucide-react";
-import ArchPortrait from "../../../components/brand/ArchPortrait";
-import { concerns, type ConcernId } from "../../../data/site";
-import { modeLabels, type Therapist } from "../../../data/therapists";
+import ArchPortrait from "../brand/ArchPortrait";
+import { concerns, type ConcernId } from "../../data/site";
+import { modeLabels, type Therapist } from "../../data/therapists";
+import "./TherapistCard.css";
 
 const concernName = (id: ConcernId) => concerns.find((c) => c.id === id)?.name ?? id;
 

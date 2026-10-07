@@ -99,18 +99,18 @@ src/
 
   components/
     layout/                   Header, Footer, ScrollManager, SmoothScroll (+ Header.css, Footer.css)
-    sections/                 PageIntro, ValueGrid, CtaBand: page sections used on more than one page
+    sections/                 PageIntro, ValueGrid, CtaBand, TherapistCard: used on more than one page
     ui/                       Field (form field), CrisisNote
     brand/                    ArchComposition (hero art), ArchPortrait, Star
     icons/                    WhatsAppIcon
 
   pages/
     home/                     HomePage.tsx, home.css
-      sections/               HeroSection, MissionSection, ConcernsSection, ValuesSection
+      sections/               HeroSection, MissionSection, TherapistsSection (4 cards), ValuesSection
     about/                    AboutPage.tsx
       sections/               WhyWeExistSection, HowWeWorkSection, ExpectationsSection
     therapists/               TherapistsPage.tsx, therapists.css
-      components/             TherapistFilters, TherapistCard, NoResults
+      components/             TherapistFilters, NoResults
     blogs/                    BlogsPage.tsx (list), BlogPostPage.tsx (article), blogs.css
       components/             BlogCard
     team/                     TeamPage.tsx, team.css   (hidden: not routed)

@@ -6,7 +6,6 @@ import { startSmoothScroll } from "../../lib/smoothScroll";
 const REVEAL_SELECTOR = [
   ".section__head",
   ".split > *",
-  ".concern-list > li",
   ".values > li",
   ".therapist-grid > li",
   ".leaders > li",

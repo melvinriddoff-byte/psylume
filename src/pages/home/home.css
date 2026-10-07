@@ -1,4 +1,4 @@
-/* Home page: hero and concerns list */
+/* Home page: hero and therapists section */
 
 .hero {
   padding-block: clamp(2.5rem, 7vw, 5.5rem) clamp(3rem, 8vw, 6rem);
@@ -40,67 +40,8 @@
   }
 }
 
-.concern-list {
-  border-bottom: 1px solid var(--line);
-}
+/* Therapists section */
 
-.concern-row {
-  display: grid;
-  gap: 0.5rem 2rem;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) auto;
-  align-items: center;
-  padding-block: clamp(1.25rem, 2.4vw, 1.75rem);
-  border-top: 1px solid var(--line);
-  color: var(--ink);
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-}
-
-@media (hover: hover) {
-  .concern-row:hover {
-    background: color-mix(in srgb, var(--c04-peach) 65%, transparent);
-  }
-}
-
-.concern-row__name {
-  font-family: var(--font-display);
-  font-size: var(--fs-h3);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
-
-.concern-row__blurb {
-  color: var(--ink-soft);
-}
-
-.concern-row__go {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--c01-coral);
-  color: var(--c07-navy);
-  transition: transform 0.2s ease;
-}
-
-@media (hover: hover) {
-  .concern-row:hover .concern-row__go {
-    transform: translateX(4px);
-  }
-}
-
-@media (max-width: 720px) {
-  .concern-row {
-    grid-template-columns: minmax(0, 1fr) auto;
-  }
-  .concern-row__blurb {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  .concern-row__go {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-  }
+.home-therapists__more {
+  margin-top: clamp(1.75rem, 3vw, 2.5rem);
 }
