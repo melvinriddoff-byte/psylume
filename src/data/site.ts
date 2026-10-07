@@ -15,7 +15,12 @@ export const site = {
   address: ["Psylume, Arakkal", "Perumpilavu, Thrissur 680519", "Kerala, India"],
   hours: "9:00 am to 7:00 pm",
   responseTime: "one working day", // TODO: only promise what the team can keep
-  whatsapp: { url: "https://wa.me/919526555590" },
+  whatsapp: {
+    display: "+91 95265 55590",
+    url: "https://wa.me/919526555590",
+    /** Opens WhatsApp with a ready-to-send booking message. */
+    bookingUrl: `https://wa.me/919526555590?text=${encodeURIComponent("Hi Psylume, I’d like to book a consultation.")}`,
+  },
   // Social links: set the url to null to hide the link everywhere.
   instagram: { handle: "@psylume.in" as string | null, url: "https://www.instagram.com/psylume.in" as string | null }, // TODO: confirm account
   linkedin: { url: "https://www.linkedin.com/company/psylume" as string | null }, // TODO: page returns 404 until it is created

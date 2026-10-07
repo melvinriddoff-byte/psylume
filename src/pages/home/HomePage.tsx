@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import CtaBand from "../../components/sections/CtaBand";
 import usePageMeta from "../../hooks/usePageMeta";
 import { site } from "../../data/site";
@@ -25,9 +24,10 @@ export default function HomePage() {
         title="You’re one call away from calm."
         lead="Tell us a little about what’s going on. We’ll suggest a therapist and a time that works for you."
       >
-        <Link to="/consultation" className="btn btn--primary">
+        <a href={site.whatsapp.bookingUrl} className="btn btn--primary" target="_blank" rel="noopener noreferrer">
           Book a consultation
-        </Link>
+          <span className="sr-only"> on WhatsApp (opens WhatsApp)</span>
+        </a>
         <a href={site.phone.href} className="btn btn--outline-light">
           Call {site.phone.display}
         </a>
