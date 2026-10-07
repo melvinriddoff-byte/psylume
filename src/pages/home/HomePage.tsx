@@ -27,7 +27,7 @@ export default function HomePage() {
       >
         <a href={site.whatsapp.bookingUrl} className="btn btn--primary" target="_blank" rel="noopener noreferrer">
           <WhatsApp aria-hidden="true" size={20} />
-          Book A Session
+          Book a consultation
           <span className="sr-only"> on WhatsApp</span>
         </a>
         <a href={site.phone.href} className="btn btn--outline-light">

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import ArchComposition from "../../../components/brand/ArchComposition";
+import WhatsApp from "../../../components/icons/WhatsAppIcon";
+import { site } from "../../../data/site";
 
 export default function HeroSection() {
   return (
@@ -14,9 +16,11 @@ export default function HeroSection() {
             and relational struggles. Meet a therapist online or in person.
           </p>
           <div className="button-row">
-            <Link to="/consultation" className="btn btn--primary">
+            <a href={site.whatsapp.bookingUrl} className="btn btn--primary" target="_blank" rel="noopener noreferrer">
+              <WhatsApp aria-hidden="true" size={20} />
               Book a consultation
-            </Link>
+              <span className="sr-only"> on WhatsApp</span>
+            </a>
             <Link to="/therapists" className="btn btn--secondary">
               Meet our therapists
             </Link>
