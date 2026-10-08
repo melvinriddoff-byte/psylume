@@ -10,7 +10,7 @@ export const site = {
   tagline: "Light within · Life within",
   summary:
     "Psylume is a psychotherapy consultation platform, online and in person, for adults facing everyday emotional and relational struggles.",
-  email: "demopsylume@gmail.com",
+  email: "psylume@gmail.com",
   phone: { display: "+91 95265 55590", href: "tel:+919526555590" },
   address: ["Psylume, Arakkal", "Perumpilavu, Thrissur 680519", "Kerala, India"],
   hours: "9:00 am to 7:00 pm",
