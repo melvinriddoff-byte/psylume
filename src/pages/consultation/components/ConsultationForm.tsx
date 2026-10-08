@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useSearchParams } from "react-router-dom";
-import { Check, MapPin, Video } from "lucide-react";
+import { Check } from "lucide-react";
 import Field from "../../../components/ui/Field";
 import { concerns, site } from "../../../data/site";
 import { findTherapist, therapists, type Mode } from "../../../data/therapists";
@@ -115,40 +115,6 @@ export default function ConsultationForm() {
         </div>
       ) : (
         <form onSubmit={onSubmit} noValidate aria-describedby={status === "error" ? "form-error" : undefined}>
-          <fieldset className="fieldset">
-            <legend className="fieldset__legend">How would you like to meet?</legend>
-            <div className="choices">
-              <label className="choice">
-                <input
-                  type="radio"
-                  name="mode"
-                  value="online"
-                  checked={form.mode === "online"}
-                  onChange={() => set("mode", "online")}
-                />
-                <span className="choice__body">
-                  <Video aria-hidden="true" size={22} />
-                  <span className="choice__title">Online</span>
-                  <span className="choice__text">Video call from wherever you are</span>
-                </span>
-              </label>
-              <label className="choice">
-                <input
-                  type="radio"
-                  name="mode"
-                  value="in-person"
-                  checked={form.mode === "in-person"}
-                  onChange={() => set("mode", "in-person")}
-                />
-                <span className="choice__body">
-                  <MapPin aria-hidden="true" size={22} />
-                  <span className="choice__title">In person</span>
-                  <span className="choice__text">At the Psylume clinic</span>
-                </span>
-              </label>
-            </div>
-          </fieldset>
-
           <div className="form-grid">
             <Field id="c-therapist" label="Therapist">
               {(aria) => (
@@ -172,6 +138,7 @@ export default function ConsultationForm() {
                       {c.name}
                     </option>
                   ))}
+                  <option value="Other">Other</option>
                 </select>
               )}
             </Field>

@@ -6,7 +6,7 @@ const principles = [
   { label: "Matched to you", Icon: Users, text: "We suggest a therapist whose approach, languages and schedule suit you." },
   { label: "Online or in person", Icon: Globe, text: "Meet by video call or at our clinic, whichever feels easier." },
   { label: "Your language", Icon: Languages, text: "Talk in the language you think and feel in." },
-  { label: "At your pace", Icon: MessagesSquare, text: "You decide what to talk about and how fast to go." },
+  { label: "At your pace", Icon: MessagesSquare, text: "Open up, explore your thoughts, and take each step as it comes." },
   { label: "No judgement", Icon: HandHeart, text: "You don’t need a diagnosis or a crisis to start." },
 ] as const;
 

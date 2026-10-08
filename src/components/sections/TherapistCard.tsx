@@ -17,12 +17,12 @@ export default function TherapistCard({ therapist: t }: { therapist: Therapist }
       <ArchPortrait initials={t.initials} tone={t.tone} />
       <div className="t-card__body">
         <h2 className="t-card__name">{t.name}</h2>
-        <p className="t-card__role">{t.role}</p>
+        {t.role ? <p className="t-card__role">{t.role}</p> : null}
         <p className="t-card__summary">{t.summary}</p>
 
         <ul className="tag-list" aria-label="Works with">
-          {t.concerns.map((id) => (
-            <li key={id}>{concernName(id)}</li>
+          {(t.expertise ?? t.concerns.map(concernName)).map((label) => (
+            <li key={label}>{label}</li>
           ))}
         </ul>
 
@@ -45,7 +45,9 @@ export default function TherapistCard({ therapist: t }: { therapist: Therapist }
         </button>
 
         <div id={panelId} className="t-card__more" hidden={!open}>
-          <p>{t.approach}</p>
+          {t.approach.map((para, i) => (
+            <p key={i}>{para}</p>
+          ))}
           <p className="t-card__langs">Speaks {t.languages.join(", ")}</p>
         </div>
 

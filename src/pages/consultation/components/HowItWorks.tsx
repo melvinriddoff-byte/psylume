@@ -1,17 +1,15 @@
-import { site } from "../../../data/site";
-
 const steps = [
   {
-    title: "Tell us what’s going on",
-    text: "Share a few details. Say as much or as little as you like.",
+    title: "Connect With Us",
+    text: "Connect with us through WhatsApp or our website and tell us what you’re looking for.",
   },
   {
-    title: "We find the right fit",
-    text: `Our care coordinator reads your request and replies within ${site.responseTime} with a suggested therapist and time.`,
+    title: "Find Your Therapist",
+    text: "We review your request and suggest a therapist who is a good fit for you.",
   },
   {
-    title: "Start talking",
-    text: "Your first session is a conversation about what brought you here. You set the pace.",
+    title: "Begin Your Session",
+    text: "Choose a convenient time for your consultation and get started.",
   },
 ] as const;
 

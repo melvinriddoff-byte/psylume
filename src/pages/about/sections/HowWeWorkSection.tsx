@@ -7,12 +7,9 @@ export default function HowWeWorkSection() {
         </h2>
         <div className="prose">
           <p>
-            Every journey begins with a consultation. We listen to what is happening, then match
-            you with a therapist from our team who fits what you need.
-          </p>
-          <p>
-            From there, sessions are yours. Meet by video call or in person at our clinic,
-            whichever suits you.
+            We understand your needs, preferred language, available dates, and comfortable time,
+            then match you with a therapist from our team who best fits your needs and
+            preferences.
           </p>
         </div>
       </div>

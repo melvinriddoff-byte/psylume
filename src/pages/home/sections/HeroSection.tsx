@@ -9,11 +9,11 @@ export default function HeroSection() {
       <div className="container hero__grid">
         <div className="hero__copy">
           <h1 id="hero-title" className="hero__title">
-            It’s okay to ask for help.
+            You’re not alone in this journey
           </h1>
           <p className="lead">
-            Psylume is a psychotherapy consultation platform for adults facing everyday emotional
-            and relational struggles. Meet a therapist online or in person.
+            Psylume is a safe space to be heard, understood, and supported as you navigate life’s
+            emotional, personal, and relationship challenges.
           </p>
           <div className="button-row">
             <a href={site.whatsapp.bookingUrl} className="btn btn--primary" target="_blank" rel="noopener noreferrer">

@@ -26,7 +26,7 @@ export default function Field({ id, label, required, hint, error, children }: Fi
     <div className="field" data-invalid={error ? "true" : undefined}>
       <label className="field__label" htmlFor={id}>
         {label}
-        <span className="field__flag">{required ? " (required)" : " (optional)"}</span>
+        {required ? <span className="field__flag"> (required)</span> : null}
       </label>
       {hint ? (
         <p className="field__hint" id={`${id}-hint`}>
