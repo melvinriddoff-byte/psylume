@@ -25,6 +25,25 @@
   letter-spacing: -0.04em;
 }
 
+/* Both buttons share one size: equal width side by side, stacked on phones */
+.hero .button-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: fit-content;
+  max-width: 100%;
+}
+
+.hero .button-row .btn {
+  white-space: nowrap;
+}
+
+/* Phones: stack the buttons but keep the desktop button size */
+@media (max-width: 640px) {
+  .hero .button-row {
+    grid-template-columns: auto;
+  }
+}
+
 .hero__art {
   justify-self: end;
   width: min(100%, 440px);

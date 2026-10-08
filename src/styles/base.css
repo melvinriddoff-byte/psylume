@@ -144,6 +144,16 @@ main:focus {
   text-decoration: none;
 }
 
+/* Hidden until a keyboard user tabs to it (still reachable by Tab), so it never shows on phones */
+.skip-link:not(:focus) {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .skip-link:focus {
   top: 0.75rem;
 }
