@@ -35,7 +35,7 @@ export const modeLabels: Record<Mode, string> = {
 export const therapists: Therapist[] = [
   {
     id: "jazbiya",
-    name: "Jazbiya",
+    name: "Jazbiya K K",
     initials: "J",
     role: "Consultant Psychologist",
     summary:
@@ -61,7 +61,7 @@ export const therapists: Therapist[] = [
   },
   {
     id: "najih",
-    name: "Najih",
+    name: "Najih Abdul",
     initials: "N",
     role: "Consultant Psychologist",
     summary:

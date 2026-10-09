@@ -7,13 +7,8 @@ export default function MissionSection() {
         </h2>
         <div className="prose">
           <p>
-            Most of us carry more than we say out loud. Psylume exists so that talking to a
-            professional feels like a normal, sensible thing to do when life gets heavy.
-          </p>
-          <p>
-            Psychotherapy is what we do. We begin with a consultation to understand what is
-            happening, then match you with a therapist whose approach, languages and schedule suit
-            you. Sessions are available by video call and in person at our clinic.
+            Psychotherapy is what we do. We understand your needs and tailor our support to your
+            preferred language, date, and comfortable time.
           </p>
         </div>
       </div>
