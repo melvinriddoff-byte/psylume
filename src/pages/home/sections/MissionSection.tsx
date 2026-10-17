@@ -7,8 +7,11 @@ export default function MissionSection() {
         </h2>
         <div className="prose">
           <p>
-            Psychotherapy is what we do. We understand your needs and tailor our support to your
-            preferred language, date, and comfortable time.
+           Most of us carry more than we say out loud. Psylume exists so that talking to a professional feels like a normal, sensible thing to do when life gets heavy.
+          </p>
+          <p>
+          Psychotherapy is what we do.
+          We understand your needs and tailor our support to your preferred language, date, and comfortable time.
           </p>
         </div>
       </div>
